@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="moduleiki">
+<head>
+    <title></title>
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="../js/iki.js"></script>
+</head>
+<body ng-controller="kontrol">
+    <div>{{mesaj}}</div>
+
+    <ul>
+        <li ng-repeat="k in isimler ">
+            {{k}}
+            <a href="" ng-click="isimSil(k)">sil</a>
+        </li>
+
+    </ul>
+    <form ng-submit="isimEkle()">
+        <input type="text" ng-model="isimgir" />
+        <input type="submit" ekle />
+
+    </form>
+</body>
+</html>
